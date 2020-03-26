@@ -41,8 +41,8 @@ public class Time {
 
     @Override
     public String toString() {
-        if (this.hour >= 0 && this.minute >= 0 && this.second >= 0){
-            if (this.second < 10 && this.minute < 10 && this.hour < 10){
+        if (this.hour !=  -1 && this.minute != -1 && this.second != -1){
+            if ((this.second >= 0 && this.second < 10) && (this.minute >= 0 && this.minute < 10) && (this.hour >= 0 && this.hour < 10)){
                 return "0" + this.hour + " : 0" + this.minute + " : 0" + this.second;
             } else if (this.second < 10 && this.minute > 10 && this.hour > 10){
                 return this.hour + " : " + this.minute + " : 0" + this.second;
@@ -54,14 +54,13 @@ public class Time {
                 return this.hour + " : 0" + this.minute + " : 0" + this.second;
             } else if (this.second < 10 && this.minute > 10 && this.hour < 10) {
                 return "0" + this.hour + " : " + this.minute + " : 0" + this.second;
-            } else if (this.second > 10 && this.minute < 10 && this.hour < 100) {
+            } else if (this.second > 10 && this.minute < 10 && this.hour < 10) {
                 return "0" + this.hour + " : 0" + this.minute + " : " + this.second;
             } else
                 return this.hour + " : " + this.minute + " : " + this.second;
         } else {
             return "-1 : -1 : -1";
         }
-
     }
 
 }

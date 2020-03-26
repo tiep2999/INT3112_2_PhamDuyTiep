@@ -44,5 +44,6 @@ public class TimeAdd {
         int s = scanner.nextInt();
         Time timeTest = new Time(h, m, s);
         Time result = timeCal(timeTest);
+        System.out.println(result.toString());
     }
 }

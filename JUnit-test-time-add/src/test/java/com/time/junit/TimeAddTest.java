@@ -9,8 +9,8 @@ public class TimeAddTest {
 
     @Test
     public void test1(){
-        String excepted = new Time(12,0,1).toString();
-        String actual = TimeAdd.timeCal(new Time(12,0,0)).toString();
+        Time excepted = new Time(12,0,1);
+        Time actual = TimeAdd.timeCal(new Time(12,0,0));
         Assert.assertEquals(excepted, actual);
     }
 
